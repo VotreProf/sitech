@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" />
+    <link rel="stylesheet" href="index.css">
+</head>
+<body id="body" onload="loadbody();">
+ 
+    <header>
+       <button class="menu"><span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span></button>
+        <h1>SI-TECH</h1>
+        <div class="rm"><span >Rm : </span> <span id="rm"> 000000</span></div>
+    </header>
+    <!--Le sidebar de mon application-->
+    <section id="mySidenav" class="side">
+
+        <div class="close"><div  onclick="closeNav()"><p onclick="closeNav()"> </p></div></div>
+        <ul>
+            <li style="border: none;"><span>Nom: </span><span  id="username"></span></li>
+            <li style="border: none;"><span>Email : </span><span  id="useremail"></span></li>
+            <div class="hr" ></div>
+            <li><i class="fas fa-home"></i><a href="#" onclick="closeNav()">Accueil</a></li>
+            <li><i class="fas fa-server"></i><a href="#" onclick="closeNav()">Services</a></li>
+            <li><i class="far fa-question-circle"></i>
+              <a href="#" onclick="closeNav()">A propos</a></li>
+            <li><i class="far fa-window-close"></i><a onclick="logout()" >Se deconecter</a></li>
+        </ul>
+    </section>
+    <!--page d'entree de l'application qui contien les video-->
+    <section id="splash" class="filterDiv splash">
+        <section>
+            <figure id="video_player">
+                <video controls poster="images/hack.jpg">
+                    <source src="nambia1.mp4" type="video/mp4">
+                    <source src="nambia1.webm" type="video/webm">
+                </video>
+                <section class="bar">
+                    <div id="myBtnContainer">
+                        <button class="btn active" onclick="filterSelection('all')"> <i class="fa fa-video"></i></button>
+                        <button class="btn" onclick="filterSelection('code')"><i class="fa fa-code" aria-hidden="true"></i></button>
+                        <button class="btn" onclick="filterSelection('bureautique')"> <i class="fa fa-laptop" aria-hidden="true"></i></button>
+                        <button class="btn" onclick="filterSelection('android')"> <i class="fa fa-mobile" aria-hidden="true"></i></button>
+                        <button class="btn" onclick="filterSelection('blog')"> <i class="fa fa-blog"></i></button>
+                        <button class="btn" onclick="filterSelection('blog')"> <i class="fab fa-google"></i></button>
+                      </div>
+                </section>
+                    <figcaption>
+                        <div class="filterDiv cars">
+                            <div class="item cars">
+                                <div class="img">
+                                    <a href="https://res.cloudinary.com/ftechplus/video/upload/v1624329075/html%20et%20css/Formation_1_E.1-1_uzayfn.mp4"><img src="images/hack.jpg" alt="Nambia Timelapse 1"></a>
+                                </div>
+                                <div class="desc">
+                                    <a href="#" class="h1">a</a>
+                                    <P>Creer un compte gmail sur votre android très facile</P>
+                                </div>
+                            </div>
+                        </div>
+     
+                        <div class="filterDiv animals">
+                            <div class="item">
+                                <div class="img">
+                                    <a href="https://res.cloudinary.com/ftechplus/video/upload/v1624329075/html%20et%20css/Formation_1_E.1-1_uzayfn.mp4"><img src="images/hack.jpg" alt="Nambia Timelapse 1"></a>
+                                </div>
+                                <div class="desc">
+                                   <a href="#" class="h1">b</a>
+                                    <P>Creer un compte gmail sur votre android très facile</P>
+                                </div>
+                            </div>
+                        </div>
+     
+                         <div class="filterDiv colors">
+                            <div class="item">
+                                <div class="img">
+                                    <a href="https://res.cloudinary.com/ftechplus/video/upload/v1624329075/html%20et%20css/Formation_1_E.1-1_uzayfn.mp4"><img src="images/hack.jpg" alt="Nambia Timelapse 1"></a>
+                                </div>
+                                <div class="desc">
+                                   <a href="#" class="h1">cl</a>
+                                    <P>Creer un compte gmail sur votre android très facile</P>
+                                </div>
+                            </div>
+                         </div>
+                     </figcaption>
+            </figure>
+        </section>
+    </section>
+
+    <!--le home de mon application-->
+    <main id="home">
+        <section class="home-header">
+          <div class="date-time">
+            <h2>Bienvenue <span  id="username"></span></h2>
+            <h2></h2>
+            <div class="bar-conect" id="conect-btn">
+              <a class="btnsignup" href="public/index.html">
+                <i class="fas fa-users"></i> Enregistrer
+            </a>
+            <a class="btnlogin" href="public/login.html">
+                <i class="fas fa-sign-in-alt"></i> Connecter
+            </a>
+            </div>
+            <span id="date">date</span>
+            <span id="month">month</span>
+            <span id="year">year</span>
+            <span id="weekday">weekday</span>
+        </div><br>
+        </section>
+        <section id="noti">
+          <div id="subheader">
+            <div>
+              <p>formation en cours</p>
+              <p>Inscription en cours : <spam style="color:blue;">non disponible</spam><i class="fa fa-chevron-right"></i></p>
+            </div>
+            <img src="images/logo.png" alt="" />
+          </div>
+        </section>
+
+        <section id="produitLivre">
+          <div class="title">
+            <div class="espace"></div>
+            <h1>Document en pdf sur android</h1>
+            <div class="espace"></div>
+          </div>
+          <div class="produit">
+            <div class="produit-item">
+              <a href="pages/creer_blog.html">
+                <div class="livre">
+                  <img src="/images/commen_creer _blog.png" alt="Comment creer un blog">
+                </div>
+                <div class="des">
+                  <p><span>Rm</span> <span id="prix">200</span></p>
+                </div>
+              </a>
+            </div>
+           
+          <div class="produit-item">
+            <a href="pages/monetiser-un-lien.html">
+              <div class="livre">
+                <img src="images/monetizer_lien.png" alt="Monetiser un lien">
+              </div>
+              <div class="des">
+                <p><span>Rm</span> <span id="prix">200</span></p>
+              </div>
+            </a>
+          </div>
+
+            <div class="produit-item">
+              <a href="pages/programation-premier.html">
+                <div class="livre">
+                  <img src="images/programmation.png" alt="programmation web">
+                </div>
+                <div class="des">
+                  <p><span>Rm</span> <span id="prix">200</span></p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section class="document">
+
+        </section>
+
+        <section style="display: none;">
+          <div class="card">
+            <div><img src="images/formation-methode.png" alt="Denim Jeans"></div>
+            <h1>cours html et css</h1>
+            <p>Apprendre la programmation web en utilisant votre android</p>
+            <a href="cours/pages/salle.html"><button>Suivez le cours</button></a>
+          </div>
+          <div class="card">
+            <div><img src="images/video-icon.png" alt="Denim Jeans"></div>
+            <h1>Bureautique</h1>
+            <p>Devenir le mettre de votre android en regardant nos videos</p>
+            <a href="bureautique.html"><button>Regarder nos videos</button></a>
+          </div>
+        </section>
+        <section>
+          <div class="card">
+            <div><img src="images/article.jpg" alt="Denim Jeans"></div>
+            <h1>Article recent</h1>
+            <p>Tous nos articles sur votre smartphone son disponible ici</p>
+            <a href="Articles/articles.html"><button>Nos articles</button></a>
+          </div>
+          <div class="card">
+            <div><img src="images/livre.png" alt="Denim Jeans"></div>
+            <h1>Ebook Shop</h1>
+            <p>Télécharger des documents informatique préparer pour vous</p>
+            <a href="shope/newshop.html"><button>Télécharger livre</button></a>
+          </div>
+        </section>
+
+        <section style="display: block; background-color: black; height: 100%;">
+          <p style="text-align: center; font-size: 2.5vw; color: white; display: block; height: auto; padding: 10px;">
+            Je sais que vous avez besoin un peu d'aide,Apprendre encore plus sur votre android
+            decouvrir ce que vous allez apprendre dans la formation et comment vous inscrire.
+          </p>
+          <center><a class="apercu" onclick="apercu()">Cliquer pour voire</a></center>
+        </section>
+      </main><!--page d'accueil de mon application-->
+
+    <!--le pied de la page de mon application-->
+    <footer>
+        <div class="share-btn-container">
+            <a href="#" class="facebook-btn">
+            <i class="fab fa-facebook" style="color: rgb(2, 110, 252);"></i>
+            </a>
+            <div class="space"></div>
+            <a href="#" class="twitter-btn">
+            <i class="fab fa-twitter" style="color: rgb(0, 183, 255);"></i>
+            </a>
+            <div class="space"></div>
+            <a  class="whatsap" onclick="homeBtn()">
+                <i class="fa fa-home" id="homeBtn" style="color: rgb(250, 58, 0);"></i>
+            </a>
+            <div class="space"></div>
+            <a href="#" class="whatsapp-btn">
+            <i class="fab fa-whatsapp" style="color: rgb(3, 134, 25);"></i>
+            </a>
+            <div class="space"></div>
+            <a href="#" class="whatsapp-btn" onclick="video()">
+                <i class="fa fa-video" style="color: red;"></i>
+                </a>
+
+            <img class="pinterest-img" src="" alt=""/>
+        </div>
+    </footer>
+    <script src="index.js"></script>
+      <!-- The core Firebase JS SDK is always required and must be listed first -->
+      <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+
+      <!-- TODO: Add SDKs for Firebase products that you want to use -->
+      <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-database.js"></script>
+  
+      <script>
+          var firebaseConfig = {
+              apiKey: "AIzaSyAwnrdMHIkFmAPHHOJhWRL-Tz0hSniCGcY",
+              authDomain: "votreprof-e3009.firebaseapp.com",
+              databaseURL: "https://votreprof-e3009-default-rtdb.firebaseio.com",
+              projectId: "votreprof-e3009",
+              storageBucket: "votreprof-e3009.appspot.com",
+              messagingSenderId: "1044359996340",
+              appId: "1:1044359996340:web:179fc5a911ef0d9a71c8e1",
+              measurementId: "G-LGH5WBR6G7"
+          };
+  
+          firebase.initializeApp(firebaseConfig);
+  
+          const auth = firebase.auth();
+          const fs = firebase.firestore();
+          const db = firebase.database();
+      </script>
+  
+      <script src="public/users.js"></script>
+    <script>
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "250px";
+        }
+        
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+        }
+        </script>
+
+<script>
+    /* 
+
+Social Share Links:
+
+WhatsApp:
+https://wa.me/?text=[post-title] [post-url]
+
+Facebook:
+https://www.facebook.com/sharer.php?u=[post-url]
+
+Twitter:
+https://twitter.com/share?url=[post-url]&text=[post-title]
+
+Pinterest:
+https://pinterest.com/pin/create/bookmarklet/?media=[post-img]&url=[post-url]&is_video=[is_video]&description=[post-title]
+
+LinkedIn:
+https://www.linkedin.com/shareArticle?url=[post-url]&title=[post-title]
+
+*/
+
+const facebookBtn = document.querySelector(".facebook-btn");
+const twitterBtn = document.querySelector(".twitter-btn");
+const whatsappBtn = document.querySelector(".whatsapp-btn");
+
+function init() {
+
+let postUrl = encodeURI(document.location.href);
+let postTitle = encodeURI("VotrePlus service et Formation Professionnelle, un nouveau nom pour une formation professionnelle adaptée aux temps et aux besoins. L’éducation, le seul vrai héritage! Alors, venez vous former chez nous.");
+
+
+facebookBtn.setAttribute(
+"href",
+`https://www.facebook.com/sharer.php?u=${postUrl}`
+);
+
+twitterBtn.setAttribute(
+"href",
+`https://twitter.com/share?url=${postUrl}&text=${postTitle}`
+);
+
+
+whatsappBtn.setAttribute(
+"href",
+`https://wa.me/?text=${postTitle} ${postUrl}`
+);
+}
+init();
+  </script>
+<script>
+    filterSelection("all")
+    function filterSelection(c) {
+      var x, i;
+      x = document.getElementsByClassName("filterDiv");
+      if (c == "all") c = "";
+      for (i = 0; i < x.length; i++) {
+        w3RemoveClass(x[i], "show");
+        if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+      }
+    }
+    
+    function w3AddClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+      }
+    }
+    
+    function w3RemoveClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        while (arr1.indexOf(arr2[i]) > -1) {
+          arr1.splice(arr1.indexOf(arr2[i]), 1);     
+        }
+      }
+      element.className = arr1.join(" ");
+    }
+    
+    // Add active class to the current button (highlight it)
+    var btnContainer = document.getElementById("myBtnContainer");
+    var btns = btnContainer.getElementsByClassName("btn");
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener("click", function(){
+        var current = document.getElementsByClassName("active");
+        current[0].className = current[0].className.replace(" active", "");
+        this.className += " active";
+      });
+    }
+    </script>
+    
+
+</body>
+</html>
