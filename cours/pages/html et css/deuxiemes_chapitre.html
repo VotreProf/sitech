@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../css/salle.css">
+    <title>Document</title>
+    <style>
+        input[type=number], select {
+  width: 100%;
+  padding: 12px 10px;
+  margin: 5px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+button{
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <main id="home">
+            <div class="center">
+                <h1>Bienvenue</h1>
+                <div>
+                    <form action="/action_page.php">
+                      <label for="fname">Numéro de référence</label>
+                      <input type="number" id="Ref" name="firstname" placeholder="Numero ici">
+                      <button>Envoyer cet infos</button>
+                    </form>
+                    <div class="signup_link">
+                        <p>Si vous n'avez pas de référence</p>
+                        Cliquer sur <a onclick="aller()">Suiver le cours</a>
+                      </div>
+                  </div>
+              </div>
+        </main>
+
+        <main  id="first">
+            <video controls>
+                <source src="https://res.cloudinary.com/ftechplus/video/upload/v1624329075/html%20et%20css/Formation_1_E.1-1_uzayfn.mp4" type=video/mp4 poster="images/formation.jpg">
+            </video>
+           <audio controls  style="display: none;"><source src="../media/html 1.3gp" type="audio/mpeg"></audio>
+        
+            <div class="div">
+                <h3>C’est quoi un dossier</h3>
+                <p>
+                    Un dossier est une boite qui vous permet de stocker un ensemble 
+                de fichier informatique, tells que :
+                </p>
+                <ul style="display: flex;">
+                    <div style="width:max-content;">
+                        <li>Images</li>
+                        <li>Audio</li>
+                        <li>Vidéos</li>
+                        <li>Etc. ..</li>
+                    </div>
+                    <div style="width: 100%;">
+                        <img src="../images/dossier.png">
+                    </div>
+                </ul>
+                <h3>C’est quoi un fichier</h3>
+                <p>
+                    Un fichier est une suite d'informations binaires, c'est-à-dire une suite de 0 et de 1. <br>
+                Ce fichier peut être stocké pour garder une trace de ces informations. 
+                Un fichier texte est un fichier composé de caractères stockés sous 
+                la forme d'octets.
+                </p>
+    
+                <h3>C’est quoi une extension</h3>
+                <p>
+                    Désignée comme étant une suite de deux à quatre caractères derrière
+                un nom de fichier, séparée par un point, l'extension de fichier ne
+                doit pas être confondue avec le format. L'extension sert
+                précisément à déterminer la nature du fichier.
+                </p>
+                <img src="../images/extension.jpg">
+                <h3>Créer un dossier sur Android</h3>
+                <p>
+                    Pour créer un dossier sur Android, c’est très simple, aller dans le menu de 
+                votre téléphone :<br><br>
+    
+                cliquer sur “dossier” ou “Mes fichier” ou “filles”
+                Cliquer sur le bouton “plus (+)” ou “Add”
+                Entrer un nom pour votre dossier et cliquer sur “OK”<br><br>
+    
+                . Vous venez de créer votre premier dossier sur votre Android en quelque second 
+                seulement<br><br>
+    
+                Sache que a l’intérieur d’un dossier on peux créer aussi d’autre dossier, 
+                qu’on peut appeler sous-dossier, pourquoi ? c’est parce qu’il se place 
+                a l’intérieur d’un dossier.<br><br>
+    
+                Les dossiers sont la pour gérer des différentes project, par exemple ; 
+                si vous créer plusieurs projet, il est important de créer un dossier 
+                pour chaque project avec leur nom.<br><br>
+                </p>
+                <p>
+                    Les sous dossier sont la pour bien organiser vos fichier, si vous un site
+                    web avec différent fichier, alors il aut des sous dossier pour ces fichiers, 
+                    par exemple vous pouvez creer un sous-dossier pour : images, audio ,vidéo, 
+                    vos pages ,etc..
+                </p>
+            </div>
+
+            <div class="navig">
+                <button id="open" onclick="firstp()"class="btn">Pré</button>
+                <button class="btn" onclick="firstn()">Suivant1</button>
+            </div>
+        </main>
+
+        <main id="second">
+            <video controls>
+        
+            </video>
+            <audio id="audio0" controls style="display: none;">
+                <source id="audio" src="../media/html cours 2.3gp" type="audio/mpeg">
+            </audio>
+            <div class="div">
+                <p>
+                    Et aujourd’hui mous allons voire dans ce chapitre les application a 
+                    installe pour commencer a coder en html et du css sur votre android.<br><br>
+    
+                    Lorsque vous allez coder en html et du css , vous aurez besoin des 
+                    applications, pour être plus a laise sur votre Android, pour cela 
+                    nous allons vous présenter quelques applications qui sont très 
+                    important pour vous.<br><br>
+    
+                    Pour commencer a écrire vos code , vous allez besoin un éditeur de 
+                    texte, une application est capable de recevoir vos codes et un
+                    navigateur pour visualiser votre travail en local<br><br>
+    
+                    Les applications que vous aurez besoin sur votre android :
+    
+                </p>
+                <ul style="display: flex;">
+                    <div style="width:max-content;">
+                        <li>Acode ou An writer free html</li>
+                        <li>Firefox ( Ancien navigateur)</li>
+                        <li>Hackers keyboard ( clavier)</li>
+                        <li>Etc. ..</li>
+                    </div>
+                    <div style="width: 100%; display: none;">
+                        <a href="..images/dossier.png"><img src="..images/dossier.png"></a>
+                    </div>
+                </ul>
+            <p>
+                <strong style="color: rgb(0, 100, 208); font-size: 18px;">Editeur de texte</strong><br>
+                Logiciel permettant de rédiger des fichiers au format texte brut, 
+                sans mise en forme. Les éditeurs de texte sont notamment utilisés par 
+                les programmeurs. Mais sur android on utilise des application comme : 
+                acode et  An writer free html .<br><br>
+                
+                <strong style="color: rgb(0, 100, 208); font-size: 18px;">Navigateur</strong><br>
+                Un navigateur est un logiciel conçu pour consulter et afficher le World 
+                Wide Web.Un navigateur n’est pas un moteur de recherche. Les navigateurs
+                le plus connu sont : Google chrome, firefox, mais nous, on va utiliser 
+                firefox pour android<br><br>
+                
+                <strong style="color: rgb(0, 100, 208); font-size: 18px;">A quoi sert le clavier Hackers keyboard ?</strong><br>
+                Ce clavier va vous aider beaucoup dans vos code, grâce a ce clavier, 
+                vous trouvez tous les fonctions d’un clavier d’ordinateur , EX: Ctrl+a, 
+                Tabullation<br><br>
+                
+            </p>
+            </div>
+            <div class="navig">
+                <button id="open" onclick="secondp()"class="btn">Pré</button>
+                <button class="btn" onclick="secondn()">Suiv>></button>
+            </div>
+        </main>
+
+        <main id="second1" style="display: none;">
+            <video controls>
+        
+            </video>
+            <audio controls>
+                <source id="audio1" src="../media/cour html 2-1.3gp" type="audio/mpeg">
+            </audio>
+            <div class="div">
+                    <div>
+                        <p>
+                            Passons a l’installation et configuration des application sur Android maintenant
+                        Installation des application sur Android.<br><br>
+                        Pour installer les application, aller sur Play store et écrire le nom de l’application 
+                        a télécharger, voici la liste des application a télécharger sur Play store.
+                        </p>
+                        
+                        <ul>
+                        <li>Acode ou an Writer free html</li>
+                        <li>Heckers keyboard</li>
+                        </ul>
+    
+                        <p>
+                            Pour le navigateur, télécharger firefox sur Google pas sur playstore, parce que il nous faut une version 
+                        ancienne, grâce a la version ancienne, nous aurons la possibilité de visiter les codes source de n’importe 
+                        quel site sur Android.<br><br>
+    
+                        Voici le lien pour télécharger le navigateur firefox, ancienne version sur votre Android gratuit, cliquer ici 
+                        pour télécharger.<br><br>
+    
+                        <h3>Configurer des application sur Android</h3>
+                        <p>
+                            Deux application ont besoin de configurer si vous le souhaiter avant de commencer a travailler avec eux sur 
+                        votre android; acode (l’editeur de text) et hackers keyboard (le clavier).
+                        </p>
+    
+                        <h3>Configuration HACKERS KEYBOARD</h3>
+                        <ul>
+                        <li>Cliquer sur l’application hackers keyboard</li>
+                        <li>Cliquer sur « anable keyboard »</li>
+                        <li>Cocher « hackers keyboard »,cliquer sur back</li>
+                        <li>Cliquer sur « set input method »</li>
+                        <li>Cocher «  keyboard »</li>
+    
+                        <p>
+                            Votre clavier est maintenant en utilisation sur votre Android, cliquer sur l’application 
+                        hackers keyboard,
+                        </p><br>
+                        <ul>
+                        <li>Cliquer sur « setting »</li>
+                        <li>Cliquer sur « keyboard mode ,portrait et « full 5-row layout</li>
+                        <LI>Cliquer « Ctrl-A(select all)override</LI>
+                        <li>Cliquer sur « use Ctrl-A (no overrite)</li>
+                        </ul>
+                        </p>
+    
+                    </div>
+            <p>
+            
+                
+            </p>
+            </div>
+            <div class="navig">
+                <button id="open" onclick="second1p()"class="btn">Pré</button>
+                <button class="btn" onclick="second1n()">Suiv>></button>
+            </div>
+        </main>
+
+        <main  id="second2" style="display: none;">
+            <video controls>
+        
+            </video>
+            <audio controls>
+                <source id="audio" src="../media/cours html 2-2.3gp" type="audio/mpeg">
+            </audio>
+            <div class="div">
+                <p>
+                    Et la , nous allons voire maintenant, comment configurer l’éditeur de texte
+                    « Acode et anWriter free html », avant même de travailler avec un éditeur texte,
+                    il faut le configurer a votre manière.<br><br>
+    
+                    Ouvrir votre navigateur Acode
+                    Cliquer sur le menu en haut et a droit 
+                    Cliquer sur « setting »
+                    Cliquer sur « Thème » et laisser sur « default »
+                    Cliquer sur « other setting »
+                    Cliquer sur « preview mode » et « Not set »<br><br>
+    
+    
+                    Après la configuration de vos applications, maintenant nous allons voire comment utiliser 
+                    Acode notre éditeur de texte sur Android.<br><br>
+    
+                    Avant même de commencer vous devez toujours créer un dossier pour tous vos projet web html et 
+                    du css, vous savez déjà comment créer un dossier sur Android.<br><br>
+    
+                    Comment créer votre premier page html sur Android?
+                    pour créer votre premier projet sur votre Android a partie de « acode » l’éditeur de texte, 
+                    une fois ouvrir l’éditeur de texte, vous tomber sur une page vierge qui n’est pas encore 
+                    enregistrer comme il faut.<br><br>
+    
+                    <h3>Pour l’enregister :</h3>
+                    <ul>
+                        <li>Cliquer sur le « MENU »</li>
+                        <li>Cliquer sur « SAVE »</li> 
+                        <li>Cliquer sur « SELECT FOLDER »</li>
+                        <li>Cliquer sur Storage et sélectionner votre dossier</li>
+                        <li>En bas cliquer sur « SAVE HERE »</li>
+                        <li>Renommer votre fichier en ajoutant l’extension « .html »</li>
+                        <p>Exemple : index.html (index est le nom et .html est l'extension).</p>
+                        <li>Cliquer sur « OK » pour l’enregistrer</li>
+                    </ul>
+    
+                </p>
+            </div>
+            <div class="navig">
+                <button id="open" onclick="second2p()"class="btn">Pré</button>
+               <a href="quiz/quizdeux.html"> <button class="btn" >Suiv>>></button></a>
+            </div>
+        </main>
+    </div>
+    
+<script src="../js/salle.js"></script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet"
+id="bootstrap-css"/>
+  <link rel="stylesheet" href="../articles.css">
+</head>
+<body>
+  <div class="body" id="homePage" >
+    <main id="aa" style="display: block;">
+     <div class="video">
+       <video controls>
+         <source src="https://res.cloudinary.com/ftechplus/video/upload/v1621826355/formation%20drive/formation_drive.1_gesemj.mp4" type="video/mp4">
+       </video>
+     </div>
+     <h1>Kijan pou konseve tout done ou sou telefon android</h1>
+      <p>
+        Si tout fwa ou pa ta gen ase espas sou tefon ou, nap montrew kouman konseve tout done enpetan ou yo
+        sou telefon ou, wap ka gen akse avek ki nepot kote ou ye nan mond lan depi ou gen akse ak entenet
+        <ul>
+          <li>prezantasyon Drive sou telefon ou</li>
+          <li>Kijan pou gen akse ak drive sou tel ou</li>
+        </ul>
+      </p>
+      <center><a class="btn" href="https://res.cloudinary.com/ftechplus/video/upload/v1621826355/formation%20drive/formation_drive.1_gesemj.mp4" download>Telechaje video a</a></center>
+      <div class="btnLike" style="display: block;">
+        <button class="like__btn" onclick="like__btn()">
+          <span id="icon"><i class="far fa-thumbs-up"></i></span>
+          <span id="count">0</span> Like
+       </button>
+      </div>
+    </main>
+    
+   <!--Menu en bas de la page-->
+    <div id="nav">
+      <nav class="nav">
+        <a onclick="profilepage()" class="nav__link">
+          <i class="material-icons nav__icon" style="color: rgb(55, 0, 253);">person</i>
+          <span class="nav__text" style="color: rgb(55, 0, 253);">Admin</span>
+        </a>
+        <a href="whatsapp://send?text=Your message here" data-action="share/whatsapp/share" class="nav__link nav__link--active">
+          <i class="material-icons nav__icon">whatsapp</i>
+          <span class="nav__text">Whatsapp</span>
+        </a>
+        <a href="../articles.html" class="nav__link">
+          <i class="material-icons nav__icon" style="color: orange;">home</i>
+          <span class="nav__text" style="color: orange;">Accueil</span>
+        </a>
+        <a onclick="video()" class="nav__link">
+          <i class="material-icons nav__icon" style="color: rgb(212, 0, 0);">smart_display</i>
+          <span class="nav__text" style="color: rgb(0, 99, 212);">Videos</span>
+        </a>
+        <a  class="nav__link" style="display: none;">
+          <i class="material-icons nav__icon" style="color: rgb(243, 7, 7); display: none;">smart_display</i>
+          <span class="nav__text" style="color: rgb(243, 7, 7);">Astuces</span>
+        </a>
+        </nav>
+    </div>
+  <script src="../article.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-database.js"></script> 
+<script>
+var firebaseConfig = {
+  apiKey: "AIzaSyA7xvnxxWkMhBonpj5AiZ5Hkkdv-jZAqDk",
+  authDomain: "maliste-d4c03.firebaseapp.com",
+  databaseURL: "https://maliste-d4c03.firebaseio.com",
+  projectId: "maliste-d4c03",
+  storageBucket: "maliste-d4c03.appspot.com",
+  messagingSenderId: "552655235785",
+  appId: "1:552655235785:web:a4b660caf5882e4be57b18",
+  measurementId: "G-V6R9FPCSG1"
+
+};
+// Initialize Firebase
+     firebase.initializeApp(firebaseConfig);
+     var firebaseRef = firebase.database().ref('emails');
+     firebaseRef.once('value' , function(snapshot){
+      snapshot.forEach(function(element){
+        document.querySelector('#root').innerHTML +=`
+        <div>${element.val()}</div>
+        `
+        
+      });
+     })
+   </script>
+
+</body>
+</html>

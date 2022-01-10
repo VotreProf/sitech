@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+  <link rel="stylesheet" href="../css/pages.css">
+  <script src="../js/question1.js"></script>
+</head>
+<body>
+  <div class="content">
+    <main>
+      <header style="display: none;">
+        <audio controls>
+          <source src="01 Pralines Et Bonbons.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+      <div class="audio-player">
+          <canvas ><button><span class="material-icons">file_download</span></button></canvas>
+          
+          <div class="controls">
+              <button class="play-pause"><span class="material-icons">
+                  play_arrow
+                  </span>
+              </button>
+              <input type="range" class="seekbar" ></input><br>
+              <span class="material-icons white">
+                  volume_down
+              </span>
+              <input type="range" class="volume"></input>
+          </div>
+      </div>
+      </header>
+      <section id="cours">
+        <h1>Chapitre 1 du cours html</h1>
+        <h2>Niveau debutant en programmation web</h2>
+        <h3>Le fonctionnement des sites web</h3>
+        <ul>
+          <li>Comment fonctionnent les sites web ?</li>
+          <li>Comment accéder a un site web
+          </li>
+          <li>✓ Quelles sont les differentes parties d’une URL</li>
+            <ol>
+              <li>Le protocole</li>
+              <li>Le sous-domaine</li>
+              <li>Le nom de domaine</li>
+              <li>Le domaine de deuxiemes niveau</li>
+              <li>Le repertoire
+              </li>
+            </ol>
+        </ul>
+        <h3>Compredre le langage html et css</h3>
+        <ul>
+          <li>Defivition des deux langages</li>
+          <li>Les roles de HTML et CSS</li>
+        </ul>
+
+        <h3>L’editeur de texte pour OS et IOS</h3>
+        <ul>
+          <li>C’est quoi un editeur de texte</li>
+          <li>Difference entre un editeur de texte et 
+            traitement de texte</li>
+        </ul>
+
+        <h3>Les navigateurs</h3>
+        <ul>
+          <li>Pourquoi les navigateur est important</li>
+          <li>Les navigateur sur android</li>
+        </ul>
+        <a onclick="debut()"><button class="debut">Commencer le cours ici >></button></a>
+        <div class="boutton">
+          <a href="https://drive.google.com/uc?export=download&id=1CxITDRHlTGV2RXplz6gGHJo-fLN8nTZd" download="premier chapitre">
+            <button class="btn">Documents</button>
+          </a>
+          <a href="" style="display: none;"><button class="btn">Audio</button></a>
+        </div>
+      </section>
+
+
+      <section id="debut">
+              <!--fonctionnement des site web premier partie-->
+      <h1 style="display: flex;">
+        <span  onclick="un()">Le fonctionnement des sites web</span> <i class="material-icons" id="expandunup">expand_more</i><i class="material-icons" id="expandundown" onclick="upun()">expand_less</i></h1>
+      <section id="un">
+        <h2>Comment fonctionnent les sites web ?</h2>
+        <p>
+          Pour bien comprendre ce que c’est, on va tout de suite utiliser un navigateur
+web, alors sans le navigateur web , il n’y a pas de site web, car c’est grâce au
+navigateur web que nous pouvons accéder aux sites web.
+        </p>
+        <h2>Comment accéder a un site web</h2>
+        <p>
+          Pour avoir accès a un site web il vous faut le URL de ce site, sans le URL vous
+ne pouvez rien n’indique au navigateur comme par exemple le site de google
+( https://www.google.com
+        </p>
+
+        <h2>Quelles sont les différentes parties d’une URL</h2>
+        <p>
+          Une URL est composée de 5 parties; le protocole, le sous-domaine, le nom de
+domaine principal, le domaine de deuxième niveau (SLD – Second-level Domain
+en anglais) et le répertoire.
+        </p>
+        <img src="../images/url.png" alt="">
+        <h2>Le protocole</h2>
+        <h4>Prénons comme exemple l'adresse suivante :</h4>
+        <p><em>https://www.ftechplus.com/contact</em></p>
+        <p>
+          Dans cette exemple le protocole est le https:// : il correspond a Hypertest Transfer Protocol Secure ( le protocole de transfert hypertexe securise) il indique a votre navigateur qu’il doit crypter, en d’autres termes dissimuler, les information sensibles qui sont entrées su votre page.
+        </p>
+        <img src="../images/url.png" alt="">
+        <p>
+          Le https vous permet d’améliorer votre référencement sur Google, et ce protocole est dons un gage de sécurité pour les visiteurs de votre site.
+        </p>
+        <h2>Le sous domaine</h2>
+        <p>
+          <strong>Dans notre exemple le sous-domaine est : www.</strong><br>
+Il indique a votre navigateur quelle page de votre site il doit afficher. Par exemple , un sous-domaine tel que « blog » fournit la page de blog de votre site web.
+        </p>
+
+        <p>
+          De plus, les sous-domaine repartissent votre site web dans différentes catégories de contenu, et montrent à Google et à vos visiteurs qu’il contient d’avantage d’informations que simplement la page d’accueil.
+        </p>
+
+        <h2>Le nom de domaine principal</h2>
+        <p>
+          Dans notre exemple, le nom de domaine est : <strong>mondomaine</strong>
+          Désormais, voyons le nom de domaine. C’est tout simplement le nom de votre site web. Il est important, car il aide les visiteurs à savoir de quoi votre site parle. Il est souvent similaire au nom de la marque. Les personnes visitant “lvmh.com” savent directement qu’il s’agit de la marque LVMH, Louis Vuitton Moët Hennessy.
+        </p>
+
+        <h2>Le domaine de deuxieme niveau</h2>
+        <p>
+          Dans notre exemple, le domaine de deuxième niveau est : <strong>.com</strong>
+Le domaine de deuxième niveau précise le type d’entité sous laquelle est enregistrée votre organisation sur internet. Par exemple, “.net” est destiné aux organisations présentant un lien avec les technologies réseau.
+        </p>
+
+        <h2>Le repertoire</h2>
+        <p>
+          Dans notre exemple, le répertoire est : <strong>/contact</strong>
+Le répertoire aide les visiteurs à comprendre sur quelle section bien précise du site ils se trouvent. L’une des URL de votre site web pourrait donc ressembler à “https://www.maboutique.com/bottes”. 
+
+        </p>
+      </section>
+      <!--Comprend le langage html deuxiemes partie-->
+      <h1 style="display: flex;"><span onclick="deux()">Compredre le langage html et css</span>
+        <i class="material-icons" id="expanddeuxup">expand_more</i>
+        <i class="material-icons" id="expanddeuxdown" onclick="updeux()">expand_less</i>
+      </h1>
+      <section id="deux">
+        <h2>Definition du html et du css</h2>
+        <p>
+          <strong>HTML</strong> (HyperText Markup Language) : il a fait son apparition dès 1991 lors du lancement du Web. Son rôle est de gérer et organiser le contenu. C'est donc en HTML que vous écrirez ce qui doit être affiché sur la page : du texte, des liens, des images… Vous direz par exemple : « Ceci est mon titre, ceci est mon menu, voici le texte principal de la page, voici une image à afficher, etc. » ;
+        </p>
+        <p>
+          <strong>CSS</strong> (Cascading Style Sheets, aussi appelées feuilles de style) : le rôle du CSS est de gérer l'apparence de la page web (agencement, positionnement, décoration, couleurs, taille du texte…). Ce langage est venu compléter le HTML en 1996.
+        </p>
+        <p>
+          <h2>Les versions de HTML</h2>
+            <strong>HTML 1</strong> : c'est la toute première version créée par Tim Berners-Lee en 1991. <br>
+            <strong>HTML 2</strong> : la deuxième version du HTML apparaît en 1994 et prend fin en 1996 avec l'apparition du HTML 3. <br>
+            <strong>HTML 3 </strong> : apparue en 1996, cette nouvelle version du HTML rajoute de nombreuses possibilités au langage, comme les tableaux, les applets, les scripts, le positionnement du texte autour des images, etc. <br>
+            <strong>HTML 4</strong> : cette version aura été utilisée un long moment durant les années 2000. Elle apparaît pour la première fois en 1998 et propose l'utilisation de frames (qui découpent une page web en plusieurs parties), des tableaux plus complexes, des améliorations sur les formulaires, etc. <br>
+            <strong>HTML 5</strong> : c'est LA dernière version. De plus en plus répandue, elle fait beaucoup parler d'elle car elle apporte de nombreuses améliorations, comme la possibilité d'inclure facilement des vidéos, un meilleur agencement du contenu, de nouvelles fonctionnalités pour les formulaires, etc. C'est cette version que nous allons découvrir ensemble. <br>
+
+        </p>
+      </section>
+
+      <!--les version de css troixiemes partie-->
+      <h1 style="display: flex;"><span onclick="trois()">Les versions de CSS</span><i class="material-icons" id="expandtroisup">expand_more</i><i class="material-icons" id="expandtroisdown" onclick="uptrois()">expand_less</i></h1>
+      <section id="trois">
+        
+        <p>
+          les <strong>éditeurs de texte</strong> : ce sont des programmes dédiés à l'écriture de code. On peut en général les utiliser pour de multiples langages, pas seulement HTML et CSS. Ils se révèlent être de puissants alliés pour les créateurs de sites web !
+        </p>
+        <p>
+          De nombreux éditeurs de texte fonctionnent sur android (ils sont disponibles partout). Je vais vous en proposer plusieurs pour que vous ayez le choix, mais, comme je sais que vous allez me demander celui que j'utilise, je vais commencer par vous présenter... anWriter free editeur !
+        </p>
+
+        <h1>anWriter free editeur : mon éditeur</h1>
+        <p>
+          anWriter free editeur est un éditeur de texte devenu très populaire parmi les développeurs. On l'utilise aussi bien pour développer en HTML et CSS .
+Il a l'avantage d'être simple, épuré et facile à lire dès le départ. Pas de centaines de boutons dont on ne comprend pas à quoi ils servent.
+
+        </p>
+        <img src="../images/1.jpg" alt="">
+        <p>
+          Malgré les apparences, il ne faut pas croire qu'il est limité. Au contraire : il est possible de l'étendre avec tout un système de plugins. Ça devient un peu plus compliqué et on ne rentrera pas là-dedans.
+        </p>
+      </section>
+
+      <!--les navigateurs quatriemes partie-->
+      <h1 style="display: flex;"><span onclick="quatre()">Les navigateurs</span><i class="material-icons" id="expandquatreup">expand_more</i><i class="material-icons" id="expandquatredown" onclick="upquatre()">expand_less</i></h1>
+      <section id="quatre">
+        
+        <strong>Pourquoi le navigateur est important</strong>
+Le navigateur est le programme qui nous permet de voir les sites web. Comme je vous l'ai expliqué plus tôt, le travail du navigateur est de lire le code HTML et CSS pour afficher un résultat visuel à l'écran. 
+        <p>
+          Si votre code CSS dit « Les titres sont en rouge », alors le navigateur affichera les titres en rouge. Le rôle du navigateur est donc essentiel !
+        </p>
+        <p>
+          On ne dirait pas, mais un navigateur est un programme extrêmement complexe. En effet, comprendre le code HTML et CSS n'est pas une mince affaire.
+        </p>
+        <p>
+          Le principal problème, vous vous en rendrez vite compte, c'est que les différents navigateurs n'affichent pas le même site exactement de la même façon ! Il faudra vous y faire et prendre l'habitude de vérifier régulièrement que votre site fonctionne correctement sur la plupart des navigateurs.
+        </p>
+        <p>
+          <strong>Les navigateurs sur android</strong>
+Il existe de nombreux navigateurs différents. Voici les principaux à connaître :
+
+        </p>
+        <ul>
+          <li>❑	Google chrome (Os et IOS)</li>
+          <li>❑	Firefox mozilla (Os et IOS)</li>
+          <li>❑	Opera mini (Os et IOS)</li>
+          <li>❑	Safari ( pour IOS)</li>
+        </ul>
+        <img src="../images/navigateur.png" alt="">
+        <center><a href="quiz/quiz.html">Testez votre connaissance</a></center>
+      </section>
+      
+      <section id="quiz">
+        <div class="que_text">
+          <!-- Here I've inserted question from JavaScript -->
+      </div>
+      <div class="option_list">
+          <!-- Here I've inserted options from JavaScript -->
+      </div>
+      
+      </section>
+      
+      </section>
+    </main>
+  </div>
+  
+
+
+
+
+<script>
+  function quiz(){
+    alert('bb');
+    document.getElementById('quiz').style.display = 'block';
+    document.getElementById('cours').style.display = 'none';
+  }
+</script>
+<script>
+  // displaying the first block of question
+  document.getElementsByClassName('container')[0].style.display = "block";
+
+  // DEFINING THE NEXT FUNCTION
+  function next(id) {
+      document.getElementsByClassName('container')[id-1].style.display = "none";
+      document.getElementsByClassName('container')[id].style.display = "block";
+  }
+  //getting final result
+  function result() {
+      var score = 0;
+      if (document.getElementById('correct1').checked) {
+          score++;
+      }
+      if (document.getElementById('correct2').checked) {
+          score++;
+      }
+      if (document.getElementById('correct3').checked) {
+          score++;
+      }
+      alert("your score is: "+ score);
+
+  }
+</script>
+<script src="../js/pages.js"></script>
+<script>
+  function suivant(){
+  if(score >= 5){
+    window.open("deuxiemes chapitre.html")
+  }else{
+    document.getElementById('msg').innerHTML = 'Désolée vous n"avez pas reussi le test du premier chapitre';
+  }
+}
+</script>
+</body>
+</html>

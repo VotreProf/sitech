@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet"
+id="bootstrap-css"/>
+  <link rel="stylesheet" href="../articles.css">
+</head>
+<body>
+  <div class="body" id="homePage" >
+    <main id="aa" style="display: block;">
+      <h1>Comment éviter des arnaques et gagner de l'argent ?</h1>
+      <h2>La première question c'est quoi "Arnaque" ?</h2>
+      <img src="/images/hack.jpg">
+      <p>Quand -on parle d’arnaque on voit arnaqueur, une personne qui 
+        est là pour vous donner de faux espoir, il vous propose quelque chose 
+        pour vous attirer ver lui et profiter de votre argent.</p>
+
+      <p>En réalité, il existe plusieurs Site et plus application qui vous 
+        proposent de gagner de l’argent, mais qui sont des arnaques.
+        Comment gagner de l'argent sans se faire arnaquer ?
+        </p>
+
+      <p>On ne peut pas gagner de l'argent sur internet sans rien faire, mais vous 
+        pouvez gagner sans investir de l'argent.</p>
+
+      <p>Et sans investir, vous ne pouvez pas gagner une grosse sonnes comme des 
+        sites qui vous proposent de gagner I CIO a 200 us dans une heure, c'est impossible</p>
+
+      <p>Si vous voulez gagner de l'argent sans investir, accepte plutôt des sites et des 
+        applications qui vous offrent des centimes comme :
+        $O_OOI us, $0.005 us par click ou par pub, au lieu de VOUS faire arnaquer par des 
+        sites qui VOLIS proposent SI us par click ou par vidéo,
+        </p>
+        <img src="/images/gagne.jpg">
+      <p>Pour terminer mon article, voici une application qui vous permet de gagner de l'argent 
+        en accomplissant des taches simples, comme :</p>
+        <ul>
+          <li>Regarder des vidéos </li>
+          <li>jouer a des jeux en ligne </li>
+          <li>Télécharger des jeux</li>
+          <li>Etc...</li>
+        </ul>
+      <p>Voici de choses que vous pouvez faire gagner sur cette application.</p>
+      <ul>
+        <li>Regarder des vidéos et gagner des clap coins.</li>
+        <li></li>
+        <li>Partager vos vide0s et gagner des
+          Clap coins.
+          </li>
+        <li>Jouer a des jeux sur l'application pour clap oins.</li>
+  
+      </ul>
+      <p>100.000 clap coins $1 us, vous pouvez faire votre premier a partie de $O.IO us par PayPal, pour voire que l'application paie vraiment.</p>
+      <center><a class="btn" href="https://h5.cc.lerjin.com/propaganda/#/community?clapcode=8162712476">Télécharger ClapCoins ici</a></center>
+      <div class="btnLike" style="display: none;">
+        <button class="like__btn" onclick="like__btn()">
+          <span id="icon"><i class="far fa-thumbs-up"></i></span>
+          <span id="count">0</span> Like
+       </button>
+      </div>
+    </main>
+    
+   <!--Menu en bas de la page-->
+    <div id="nav">
+      <nav class="nav">
+        <a onclick="profilepage()" class="nav__link">
+          <i class="material-icons nav__icon" style="color: rgb(55, 0, 253);">person</i>
+          <span class="nav__text" style="color: rgb(55, 0, 253);">Admin</span>
+        </a>
+        <a href="whatsapp://send?text=Your message here" data-action="share/whatsapp/share" class="nav__link nav__link--active">
+          <i class="material-icons nav__icon">whatsapp</i>
+          <span class="nav__text">Whatsapp</span>
+        </a>
+        <a href="../articles.html" class="nav__link">
+          <i class="material-icons nav__icon" style="color: orange;">home</i>
+          <span class="nav__text" style="color: orange;">Accueil</span>
+        </a>
+        <a onclick="video()" class="nav__link">
+          <i class="material-icons nav__icon" style="color: rgb(212, 0, 0);">smart_display</i>
+          <span class="nav__text" style="color: rgb(0, 99, 212);">Videos</span>
+        </a>
+        <a  class="nav__link" style="display: none;">
+          <i class="material-icons nav__icon" style="color: rgb(243, 7, 7); display: none;">smart_display</i>
+          <span class="nav__text" style="color: rgb(243, 7, 7);">Astuces</span>
+        </a>
+        </nav>
+    </div>
+  <script src="../article.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-database.js"></script> 
+<script>
+var firebaseConfig = {
+  apiKey: "AIzaSyA7xvnxxWkMhBonpj5AiZ5Hkkdv-jZAqDk",
+  authDomain: "maliste-d4c03.firebaseapp.com",
+  databaseURL: "https://maliste-d4c03.firebaseio.com",
+  projectId: "maliste-d4c03",
+  storageBucket: "maliste-d4c03.appspot.com",
+  messagingSenderId: "552655235785",
+  appId: "1:552655235785:web:a4b660caf5882e4be57b18",
+  measurementId: "G-V6R9FPCSG1"
+
+};
+// Initialize Firebase
+     firebase.initializeApp(firebaseConfig);
+     var firebaseRef = firebase.database().ref('emails');
+     firebaseRef.once('value' , function(snapshot){
+      snapshot.forEach(function(element){
+        document.querySelector('#root').innerHTML +=`
+        <div>${element.val()}</div>
+        `
+        
+      });
+     })
+   </script>
+
+</body>
+</html>

@@ -1,0 +1,445 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap");
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+
+}
+header .slide{
+  max-height: 100%;
+}
+header img{
+  width: 100%;
+  min-height: 200px;
+  height: 100%;
+}
+#nav{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 55px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  background-color: #ffffff;
+  display: flex;
+  overflow-x: auto;
+}
+.nav {
+  width: 85%;
+}
+
+.nav__link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  min-width: 50px;
+  overflow: hidden;
+  white-space: nowrap;
+  font-family: sans-serif;
+  font-size: 13px;
+  color: #444444;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+  transition: background-color 0.1s ease-in-out;
+}
+
+.nav__link:hover {
+  background-color: #eeeeee;
+}
+
+.nav__link--active {
+  color: #009578;
+}
+img{
+  width: 100%;
+}
+.nav__icon {
+  font-size: 35px;
+}
+#profilePage, #videoPage{
+  display: none;
+}
+@media only screen and (min-width: 801px) {
+  .dispo{
+    background: blue;
+    width: 100%;
+    height: 100vh;
+    transition: 1s;
+  }
+  .body{
+    display: none;
+    transition: 1s;
+  }
+
+}
+/*bar de recherche de l'application*/
+@media only screen and (max-width: 800px){
+  .barsearch{
+    background-color: blue;
+    height: 100px;
+    display: inline-block;
+  }
+  .barsearch h1{
+    color: white;
+    font-size: 28px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 2px;
+    margin-top: 0px;
+    padding-top: 5px;
+  }
+ .search-bar {
+    align-items: center;
+    border: 1px solid;
+    width: 80%;
+    height: 33px;
+    background: #fff;
+    border-radius: 2px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    margin: auto;
+    padding: 5px;
+}
+.search-bar input{
+  width: 98%;
+  height: 25px;
+  outline: white;
+  border: 0px;
+}
+#a{
+    display: auto;
+}
+}
+/*espace mes articles lire la suite*/
+@media only screen and (max-width: 800px){
+  main{
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+
+a{
+    text-decoration: none;
+}
+#a{
+  display: flex;
+  border: 1px solid orange;
+}
+#a img{
+  width: 100px;
+  height: 100%;
+}
+.card-item{
+  display: flex;
+  border: 1px solid blue;
+}
+.card-item .item{
+  margin: 5px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+.card-item .item h1{
+  color: blue;
+  font-size: 4vw;
+  background-color: rgba(255, 255, 255, 0.589);
+}
+.card-item .item p{
+  color: rgb(56, 56, 61);
+  font-size: 3.5vw;
+  text-align: justify;
+}
+.card-item .item .btn, #aa .btn{
+background-color: #4CAF50; /* Green */
+border: none;
+color: white;
+padding: 5px 10px;
+text-align: center;
+justify-content: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin-bottom: 5px;
+cursor: pointer;
+-webkit-transition-duration: 0.4s; /* Safari */
+transition-duration: 0.4s;
+}
+.btnLike{
+  border: 1px solid orange;
+}
+.like__btn {
+  padding: 5px;
+  margin: 2px;
+  padding: 3px 5px;
+  background: white;
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+  border-radius: 5px;
+  color: blue;
+  outline: normal;
+  border: 1px solid blue;
+  cursor: pointer;
+}
+.btn span{
+  color: white;
+  font-style: italic;
+}
+.card-item .item .btn:hover {
+box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+background: orange;
+}
+#aa .btn:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+  background: orange;
+  }
+  .click{
+    display: flex;
+    justify-content: space-between;
+    margin: 0px;
+  }
+  .click #root{
+    font-size: 4vw;
+    margin: auto;
+
+  }
+  .click-root{
+    display: flex;
+    border: 1px solid blue;
+    padding: 1px;
+    
+  }
+  .click-root i{
+    color: blue;
+    margin: auto;
+    margin-right: 5px;
+    padding-right: 5px;
+    font-size: 7vw;
+    border-right: 2px solid black;
+  }
+
+  .click .bt{
+    background-color: white;
+    border: 1px solid blue;
+    padding: 1px 5px 1px 5px;
+  }
+  .click .bt:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+  
+  }
+
+
+}
+
+@media only screen and (max-width: 800px){
+  #aa{
+    display: none;
+  }
+  #aa{
+    width: 100%;
+    padding: 3px;
+  }
+  #aa h1{
+    font-size: 6vw;
+    color: blue;
+    text-align: center;
+  }
+  #aa h2{
+    font-size: 5vw;
+    color: orange;
+    text-align: center;
+  }
+  #aa p{
+    font-size: 3vw;
+    color: black;
+    text-align: justify;
+  }
+  #aa ul li{
+    font-size: 3vw;
+    color: orange;
+    text-align: justify;
+    margin-left: 10px;
+  }
+}
+/* reseau sociau et d'autres*/
+@media only screen and (max-width: 800px) {
+  .body{
+    display: block;
+    transition: 1s;
+    margin-bottom: 17%;
+  }
+  .dispo{
+    display: none;
+    transition: 1s;
+  }
+
+main{
+  width: 100%;
+  height: 100%;
+  background: white;
+  margin-bottom: 0px ;
+}
+section{
+  display: flex;
+  width: 100%;
+}
+.card {
+  box-shadow: 0px 0px 2px 2px rgba(0,0,0,0.75);
+  width: 100%;
+  min-width: 140px;
+  margin: 5px;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  border-radius: 10px;
+  border: 1px solid blue;
+}
+.card h1{
+  font-size: 5vw;
+  margin: 2px;
+}
+.card p{
+  font-size: 2.5vw;
+  margin: 1px;
+  color: black;
+  font-style: normal;
+  line-height: normal;
+}
+.card div{
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 50px;
+  margin-bottom: 2px;
+}
+.card div img{
+  width: 50px;
+  height: 50px;
+  border: 1px solid orange;
+  border-radius: 50%;
+  margin-top: 4px;
+  background: white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.card button {
+  font-size: 3.6vw;
+  border: none;
+  border-radius: 5px;
+  outline: 0;
+  padding: 3px;
+  color: white;
+  background-color: blue;
+  text-align: center;
+  cursor: pointer;
+  width: 80%;
+  margin: 4px;
+}
+
+.card button:hover {
+  background: orange;
+  opacity: 0.7;
+}
+
+  /* mes pages reseau sociaux*/
+#facebook, #whatsapp{
+  display: none;
+}
+#whatsapp, #facebook{
+  background-color: white;
+  height: 100vh;
+}
+#whatsapp video{
+  width: 100%;
+}
+#whatsapp h1{
+  font-size: 2rem;
+  text-align: center;
+  color: green;
+}
+#whatsapp p{
+  font-size: 1.2rem;
+  text-align: justify;
+  color: black;
+  margin: 10px;
+}
+#whatsapp a{
+  border: 1px solid green;
+  padding: 10px;
+  font-weight: bold;
+}
+#whatsapp a:hover{
+  background-color: green;
+  color: white;
+}
+
+.fb-like{
+  width: 100%;
+  border: blue 1px solid;
+  background-color: blue;
+  padding: 10px;
+  margin:10px auto;
+  text-align: center;
+  color: wed;
+}
+#facebook h1{
+  font-size: 2rem;
+  text-align: center;
+  color: blue;
+}
+#facebook h3{
+  font-size: 1.2rem;
+  text-align: center;
+  color: black;
+  margin: 10px;
+}
+
+#facebook .container {
+  border: 2px solid #ccc;
+  background-color: #eee;
+  border-radius: 5px;
+  padding: 16px;
+  margin: 16px 0
+}
+
+#facebook .container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+#facebook .container img {
+  float: left;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+#facebook .container span {
+  font-size: 20px;
+  margin-right: 15px;
+}
+.video{
+  width: 100%;
+}
+.video video{
+  width: 100%;
+}
+#aa ul li{
+  list-style: none;
+  color: black;
+  font-size: 14px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+}
+
+
+
+
+
+
+
+

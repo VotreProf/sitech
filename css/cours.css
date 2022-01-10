@@ -1,0 +1,211 @@
+body{
+    background: white;
+    margin: 0px;
+    padding: 0px;
+}
+*{
+    box-sizing: border-box;
+}
+
+main{
+    width: 100%;
+}
+section{
+    width: 100%;
+}
+main{
+    display: flex;
+    height: 100vh;
+    background: gray;
+    justify-content: center;
+    align-items: center;
+}
+.home div{
+    background: rgb(0, 138, 202);
+    width: 98%;
+    margin: auto;
+    box-shadow: 0px 0px 3px 1px black;
+}
+.home h1{
+    margin: 2px;
+    font-size: 7vw;
+    text-align: center;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 0px 0px 2px 1px blue;
+}
+.home .material-icons{
+    font-size: 150px;
+    text-align: center;
+    margin: 2px;
+}
+.home p{
+    color: white;
+    font-size: 5vw;
+    text-align: center;
+    margin: 6px;
+    margin-top: 2px;
+}
+.home button{
+    background: blue;
+    border: none;
+    padding: 10px;
+    color: white;
+    font-size: 5vw;
+    margin: 5px;
+    cursor: pointer;
+}
+.home button:hover{
+    background: orangered;
+    border-radius: 2px;
+}
+.header{
+    background: blue;padding: 10px;
+}
+.header h1{
+    text-align: center;
+    color: white;
+    font-size: 6vw;
+    font-family: arial black;
+    margin: 3px;
+}
+.header p{
+    text-align: center;
+    color: white;
+    font-size: 4vw;
+    font-family: arial black;
+    margin: 3px;
+}
+.header p em{
+    color: red;
+    margin: 15px;
+}
+#signup{
+    display: none;
+    width: 98%;
+    margin: auto;
+    background: white;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.field{
+    margin-top: 10px;
+    display: flex;
+    width: 100%;
+}
+.field .input{
+    width: 100%;
+    margin-right: 1px;
+}
+#login{
+    display: none;
+}
+.i{
+    width: 50px;
+    border: none;
+    display: flex;
+    background: orange;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+input[type="text"], input[type="email"], input[type="number"], input[type="date"]{
+    padding: 10px;
+    width: 100%;
+    margin: auto;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid blue;
+}
+#send{
+    background: blue;
+    width: 100%;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    color: white;
+    font-size: 5vw;
+    cursor: pointer;
+}
+#fermer{
+    background: red;
+    width: 100%;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    color: white;
+    font-size: 5vw;
+    cursor: pointer;
+}
+select{
+    padding: 11.5px;
+    width: 100%;
+    margin: auto;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid blue;
+}
+.select{
+    border: 1px solid red;
+    width: 50px;
+}
+#code{
+    background: black;
+    color: white;
+    padding: 10px;
+    width: 50px;
+    margin: auto;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid blue;
+}
+
+#message{
+    width: 90%;
+    background: white;
+    box-shadow: 0px 0px  3px 1px black;
+    padding: 20px;
+    height: auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+  }
+  #message div{
+    align-items: center;
+    justify-content: center;
+  }
+  #message h1{
+    margin-top: 15px;
+    color: orangered;
+    text-align: center;
+  }
+
+  #message i{
+    font-size: 200px;
+    color: blue;
+  }
+  .close{
+    background: black;
+    height: 50px;
+    margin-top: -15px;
+  }
+  .close h1{
+    color: rgb(3, 3, 78);
+  }
+  #c{
+    box-shadow: 0px 0px 3px 1px blue;
+    width: 30px;
+    height: 30px;
+    top: 8%;
+    left: 30px;
+    cursor:pointer;
+    margin-bottom: 20px;
+    border-radius: 50px;
+    color: red;
+    background: white;
+    padding: 3px;
+    position: absolute;
+  }
