@@ -60,22 +60,6 @@ const scriptURL = 'https://script.google.com/macros/s/AKfycbz9X5FHrJMi1FGcDyoijk
               document.getElementById('bouton').style.display = 'none';
             }
           }
-  
-          number.onkeydown = function(){
-            const regexn = /^[0-9]{11}$/;
-            if(regexn.test(number.value)){
-              // span[1].innerText = "Numéro valid";
-              // span[1].style.color = "lime";
-              document.getElementById('valid').style.display = 'block';
-              document.getElementById('invalid').style.display = 'none';
-            } else{
-              // span[1].innerText = "Votre numéro complet";
-              // span[1].style.color = "red";
-              document.getElementById('invalid').style.display = 'block';
-              document.getElementById('valid').style.display = 'none';
-              document.getElementById('bouton').style.display = 'none';
-            }
-          }
 
 
 

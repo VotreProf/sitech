@@ -11,6 +11,29 @@
     <link rel="stylesheet" href="page.css">
 </head>
 <body id="body" onload="loadbody();">
+ 
+    <header>
+       <button class="menu"><span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span></button>
+        <h1>SI-TECH</h1>
+        <div class="rm"><span >Rm : </span> <span id="rm"> 000000</span></div>
+    </header>
+    <!--Le sidebar de mon application-->
+    <section id="mySidenav" class="side">
+
+        <div class="close"><div  onclick="closeNav()"><p onclick="closeNav()"> </p></div></div>
+        <ul>
+            <li style="border: none;"><span>Nom: </span><span  id="username"></span></li>
+            <li style="border: none;"><span>Email : </span><span  id="useremail"></span></li>
+            <div class="hr" ></div>
+            <li><i class="fas fa-home"></i><a href="#" onclick="closeNav()">Accueil</a></li>
+            <li><i class="fas fa-server"></i><a href="#" onclick="closeNav()">Services</a></li>
+            <li><i class="far fa-question-circle"></i>
+              <a href="#" onclick="closeNav()">A propos</a></li>
+            <li><i class="far fa-window-close"></i><a onclick="logout()" >Se deconecter</a></li>
+        </ul>
+    </section>
+  
+
     <!--lformulaire downloadde mon application-->
     <main id="home">
         <section class="produit">
@@ -93,8 +116,34 @@
       </section>
       </main><!--formulaire downloadde mon application-->
 
+    <!--le pied de la page de mon application-->
+    <footer>
+        <div class="share-btn-container">
+            <a href="#" class="facebook-btn" style="display: none;">
+            <i class="fab fa-facebook" style="color: rgb(2, 110, 252);"></i>
+            </a>
+            
+            <a href="#" class="twitter-btn" style="display: none;">
+            <i class="fab fa-twitter" style="color: rgb(0, 183, 255);"></i>
+            </a>
+            
+            <a href="/index.html"  class="whatsap" >
+                <i class="fa fa-home" id="homeBtn" style="color: rgb(250, 58, 0);"></i>
+            </a>
+            
+            <a href="#" class="whatsapp-btn">
+            <i class="fab fa-whatsapp" style="color: rgb(3, 134, 25);"></i>
+            Partager sur whatsap
+            </a>
+            
+            <a href="#" class="whatsapp-btn" onclick="video()" style="display: none;">
+                <i class="fa fa-video" style="color: red;"></i>
+                </a>
+
+            <img class="pinterest-img" src="" alt=""/>
+        </div>
+    </footer>
     <script src="index.js"></script>
-    <script src="page.js"></script>
       <!-- The core Firebase JS SDK is always required and must be listed first -->
       <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
 
@@ -102,5 +151,89 @@
       <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
       <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
       <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-database.js"></script>
+  
+      <script>
+          var firebaseConfig = {
+              apiKey: "AIzaSyAwnrdMHIkFmAPHHOJhWRL-Tz0hSniCGcY",
+              authDomain: "votreprof-e3009.firebaseapp.com",
+              databaseURL: "https://votreprof-e3009-default-rtdb.firebaseio.com",
+              projectId: "votreprof-e3009",
+              storageBucket: "votreprof-e3009.appspot.com",
+              messagingSenderId: "1044359996340",
+              appId: "1:1044359996340:web:179fc5a911ef0d9a71c8e1",
+              measurementId: "G-LGH5WBR6G7"
+          };
+  
+          firebase.initializeApp(firebaseConfig);
+  
+          const auth = firebase.auth();
+          const fs = firebase.firestore();
+          const db = firebase.database();
+      </script>
+  
+      <script src="/public/users.js"></script>
+      <script src="page.js"></script>
+    <script>
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "250px";
+        }
+        
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+        }
+        </script>
+
+
+
+<script>
+  /* 
+
+Social Share Links:
+
+WhatsApp:
+https://wa.me/?text=[post-title] [post-url]
+
+Facebook:
+https://www.facebook.com/sharer.php?u=[post-url]
+
+Twitter:
+https://twitter.com/share?url=[post-url]&text=[post-title]
+
+Pinterest:
+https://pinterest.com/pin/create/bookmarklet/?media=[post-img]&url=[post-url]&is_video=[is_video]&description=[post-title]
+
+LinkedIn:
+https://www.linkedin.com/shareArticle?url=[post-url]&title=[post-title]
+
+*/
+
+const facebookBtn = document.querySelector(".facebook-btn");
+const twitterBtn = document.querySelector(".twitter-btn");
+const whatsappBtn = document.querySelector(".whatsapp-btn");
+let titre = document.getElementById('titre');
+function init() {
+
+let postUrl = encodeURI( "https://play.google.com/store/apps/details?id=com.sitech.sitech");
+let postTitle = encodeURI("Voici un document important \nApprendre la programmation web en html et css sur androidn Vous pouvez le télécharger gratuitement ici\n" );
+
+
+facebookBtn.setAttribute(
+"href",
+`https://www.facebook.com/sharer.php?u=${postUrl}`
+);
+
+twitterBtn.setAttribute(
+"href",
+`https://twitter.com/share?url=${postUrl}&text=${postTitle}`
+);
+
+
+whatsappBtn.setAttribute(
+"href",
+`https://wa.me/?text=${postTitle} ${postUrl}`
+);
+}
+init();
+</script>
 </body>
 </html>
