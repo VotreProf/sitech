@@ -9,12 +9,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" />
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="css/barmenu.css">
 </head>
 <body id="body" onload="loadbody();">
  
     <header>
        <button class="menu"><span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span></button>
-        <h1>SI-TECH</h1>
+        <h1 id="status">SI-TECH</h1>
         <div class="rm"><span >Rm : </span> <span id="rm"> 000000</span></div>
     </header>
     <!--Le sidebar de mon application-->
@@ -178,7 +179,7 @@
             <div><img src="images/video-icon.png" alt="Denim Jeans"></div>
             <h1>Bureautique</h1>
             <p>Devenir le mettre de votre android en regardant nos videos</p>
-            <a href="bureautique.html"><button>Regarder nos videos</button></a>
+            <a href="cours/pages/salle bureautique.html"><button>Regarder nos videos</button></a>
           </div>
         </section>
         <section>
@@ -192,7 +193,7 @@
             <div><img src="images/livre.png" alt="Denim Jeans"></div>
             <h1>Ebook Shop</h1>
             <p>Télécharger des documents informatique préparer pour vous</p>
-            <a href="shope/newshop.html"><button>Télécharger livre</button></a>
+            <a href="cours/pages/salle bureautique.html"><button>Télécharger livre</button></a>
           </div>
         </section>
 
@@ -201,7 +202,7 @@
             Je sais que vous avez besoin un peu d'aide,Apprendre encore plus sur votre android
             decouvrir ce que vous allez apprendre dans la formation et comment vous inscrire.
           </p>
-          <center><a class="apercu" onclick="apercu()">Cliquer pour voire</a></center>
+          <center><a href="pages/courlive/rencontre.html">Cliquer pour voire</a></center>
         </section>
       </main><!--page d'accueil de mon application-->
 
@@ -216,7 +217,7 @@
             <i class="fab fa-twitter" style="color: rgb(0, 183, 255);"></i>
             </a>
             <div class="space"></div>
-            <a  class="whatsap" onclick="homeBtn()">
+            <a  class="home" onclick="homeBtn()">
                 <i class="fa fa-home" id="homeBtn" style="color: rgb(250, 58, 0);"></i>
             </a>
             <div class="space"></div>
@@ -224,7 +225,7 @@
             <i class="fab fa-whatsapp" style="color: rgb(3, 134, 25);"></i>
             </a>
             <div class="space"></div>
-            <a href="#" class="whatsapp-btn" onclick="video()">
+            <a href="#" class="video" onclick="video()">
                 <i class="fa fa-video" style="color: red;"></i>
                 </a>
 
@@ -365,6 +366,16 @@ init();
     }
     </script>
     
+    
+
+    <!-- <script>
+      var connection = window.navigator.onLine
+      if(connection){
+        document.getElementById('home').style.display = "block";
+      } else{
+        document.getElementById('home').style.display = "none";
+      }
+    </script> -->
 
 </body>
 </html>
